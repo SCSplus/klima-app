@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="configReader.cpp" />
+    <ClCompile Include="webServiceDataStore.cpp" />
+    <ClCompile Include="airPressureSensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="temperatureSensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="humiditySensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Sensors">
+      <UniqueIdentifier>{d39ce9c2-aa2b-45be-af3b-7b8aae9d0c06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="configReader.h" />
+    <ClInclude Include="webServiceDataStore.h" />
+    <ClInclude Include="airPressureSensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="temperatureSensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="humiditySensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="config.ini" />
+  </ItemGroup>
+</Project>
