@@ -6,7 +6,9 @@
 #include <sys/ioctl.h>
 #include <fcntl.h>
 #include <unistd.h>
+extern "C"{
 #include <wiringPi.h>
+}
 
 class windSpeedSensor
 {
