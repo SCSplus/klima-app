@@ -8,6 +8,7 @@
 #include "airPressureSensor.h"
 #include "humiditySensor.h"
 #include "temperatureSensor.h"
+#include "windSpeedSensor.h"
 
 using namespace std;
 
@@ -20,12 +21,19 @@ int main()
     airPressureSensor *airPressure = new airPressureSensor();
     humiditySensor *humidity = new humiditySensor();
     temperatureSensor *temperature = new temperatureSensor();
+    windSpeedSensor *windSpeed = new windSpeedSensor();
 
     while (true)
     {
         dataStore->PostHumidityData(15);
         dataStore->PostHumidityData(7);
         dataStore->PostHumidityData(25);
+
+		float valueWindSpeed = windSpeed->GetSensorData();
+			if (valueWindSpeed != NULL)
+			{
+				dataStore->PostHumidityData(valueWindSpeed);
+			}
 
         /*float valueAirPressure = airPressure->GetSensorData();
         if (valueAirPressure != NULL)
