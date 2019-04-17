@@ -11,6 +11,13 @@ windSpeedSensor::~windSpeedSensor()
 {
 }
 
+int imp_per_sec = 0;
+
+void windInterrupt(void) {
+	imp_per_sec++;
+	std::cout << imp_per_sec;
+}
+
 float windSpeedSensor::GetSensorData()
 {
 	wiringPiSetup();
@@ -20,12 +27,10 @@ float windSpeedSensor::GetSensorData()
 	pinMode(pinNumber, INPUT);
 	pullUpDnControl(pinNumber, PUD_UP);
 
-	int imp_per_sec = 0;
+	
 	float actual_windspeed_msec = 0.0;
 	
-	void windInterrupt(void) {
-		imp_per_sec++;
-	}
+	
 	wiringPiISR(pinNumber, INT_EDGE_RISING, &windInterrupt);
 
 
