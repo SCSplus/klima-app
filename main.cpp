@@ -8,7 +8,9 @@
 #include "airPressureSensor.h"
 #include "humiditySensor.h"
 #include "temperatureSensor.h"
-#include "windSpeedSensor.h"
+#include "luminositySensor.h"
+#include "risingDampSensor.h"
+#include "windStrengthSensor.h"
 
 using namespace std;
 
@@ -21,21 +23,17 @@ int main()
     airPressureSensor *airPressure = new airPressureSensor();
     humiditySensor *humidity = new humiditySensor();
     temperatureSensor *temperature = new temperatureSensor();
-    windSpeedSensor *windSpeed = new windSpeedSensor();
+    luminositySensor *luminosity = new luminositySensor();
+    risingDampSensor *risingDamp = new risingDampSensor();
+	windStrengthSensor *windStrength = new windStrengthSensor();
 
     while (true)
     {
-        dataStore->PostHumidityData(15);
+        /*dataStore->PostHumidityData(15);
         dataStore->PostHumidityData(7);
         dataStore->PostHumidityData(25);
-
-		float valueWindSpeed = windSpeed->GetSensorData();
-			if (valueWindSpeed != NULL)
-			{
-				dataStore->PostHumidityData(valueWindSpeed);
-			}
-
-        /*float valueAirPressure = airPressure->GetSensorData();
+*/
+        float valueAirPressure = airPressure->GetSensorData();
         if (valueAirPressure != NULL)
         {
             dataStore->PostHumidityData(valueAirPressure);
@@ -51,9 +49,27 @@ int main()
         if (valueTemperature != NULL)
         {
             dataStore->PostHumidityData(valueTemperature);
-        }*/
+        }
 
-        //sleep(10);
+        float valueLuminosity = luminosity->GetSensorData();
+        if (valueLuminosity != NULL)
+        {
+            dataStore->PostLumuinosityData(valueLuminosity);
+        }
+
+        float valueRisingDamp = risingDamp->GetSensorData();
+        if (valueRisingDamp != NULL)
+        {
+            dataStore->PostRisingDampData(valueRisingDamp);
+        } 
+		
+		float valueWindStrength = windStrength->GetSensorData();
+        if (valueWindStrength != NULL)
+        {
+            dataStore->PostRisingDampData(valueWindStrength);
+        }
+
+        sleep(600);
     }
 
 }

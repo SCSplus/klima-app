@@ -72,9 +72,12 @@
     <ClCompile Include="airPressureSensor.cpp" />
     <ClCompile Include="configReader.cpp" />
     <ClCompile Include="humiditySensor.cpp" />
+    <ClCompile Include="luminositySensor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="risingDampSensor.cpp" />
     <ClCompile Include="temperatureSensor.cpp" />
     <ClCompile Include="webServiceDataStore.cpp" />
+    <ClCompile Include="windStrengthSensor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="config.ini">
@@ -88,8 +91,11 @@
     <ClInclude Include="airPressureSensor.h" />
     <ClInclude Include="configReader.h" />
     <ClInclude Include="humiditySensor.h" />
+    <ClInclude Include="luminositySensor.h" />
+    <ClInclude Include="risingDampSensor.h" />
     <ClInclude Include="temperatureSensor.h" />
     <ClInclude Include="webServiceDataStore.h" />
+    <ClInclude Include="windStrengthSensor.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>

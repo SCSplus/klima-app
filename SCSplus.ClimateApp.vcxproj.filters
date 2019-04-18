@@ -13,6 +13,15 @@
     <ClCompile Include="humiditySensor.cpp">
       <Filter>Sensors</Filter>
     </ClCompile>
+    <ClCompile Include="luminositySensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="risingDampSensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="windStrengthSensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">
@@ -29,6 +38,15 @@
       <Filter>Sensors</Filter>
     </ClInclude>
     <ClInclude Include="humiditySensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="luminositySensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="risingDampSensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="windStrengthSensor.h">
       <Filter>Sensors</Filter>
     </ClInclude>
   </ItemGroup>

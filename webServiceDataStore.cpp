@@ -77,6 +77,50 @@ void webServiceDataStore::PostHumidityData(float value)
     PostData(data);
 }
 
+void webServiceDataStore::PostLumuinosityData(float value)
+{
+    string strValue = std::to_string(value);
+
+    string data = "{\"DynamicToken\": \"" + Token + "\"," +
+        "\"Data\": {" +
+        "\"ClimateStationId\": \"" + DeviceId + "\"," +
+        "\"DateOfEntry\" : \"" + DateTimeNow() + "\"," +
+        "\"Type\" : {" +
+        "\"MeasurementTypeId\": \"\"," +
+        "\"Name\" : \"Lichtstärke\"" +
+        "}, \"Unit\" : {" +
+        "\"MeasurementUnitId\": \"\"," +
+        "\"Name\" : \"Lux\"," +
+        "\"MeasurementType\" : {" +
+        "\"MeasurementTypeId\": \"\"," +
+        "\"Name\" : \"Lichtstärke\"" +
+        "}}, \"Value\": \"" + strValue + " \",}}";
+
+    PostData(data);
+}
+
+void webServiceDataStore::PostRisingDampData(float value)
+{
+    string strValue = std::to_string(value);
+
+    string data = "{\"DynamicToken\": \"" + Token + "\"," +
+        "\"Data\": {" +
+        "\"ClimateStationId\": \"" + DeviceId + "\"," +
+        "\"DateOfEntry\" : \"" + DateTimeNow() + "\"," +
+        "\"Type\" : {" +
+        "\"MeasurementTypeId\": \"\"," +
+        "\"Name\" : \"Bodenfeuchtigkeit\"" +
+        "}, \"Unit\" : {" +
+        "\"MeasurementUnitId\": \"\"," +
+        "\"Name\" : \"Einheit\"," +
+        "\"MeasurementType\" : {" +
+        "\"MeasurementTypeId\": \"\"," +
+        "\"Name\" : \"Bodenfeuchtigkeit\"" +
+        "}}, \"Value\": \"" + strValue + " \",}}";
+
+    PostData(data);
+}
+
 void webServiceDataStore::PostData(string data)
 {
     CURL *curl;
