@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-    configReader *configs = new configReader();
+	configReader *configs = new configReader();
     webServiceDataStore *dataStore = new webServiceDataStore(
        configs->GetDeviceId(), configs->GetUrl(), configs->GetToken());
 
@@ -29,11 +29,11 @@ int main()
 
     while (true)
     {
-        /*dataStore->PostHumidityData(15);
+        dataStore->PostHumidityData(15);
         dataStore->PostHumidityData(7);
         dataStore->PostHumidityData(25);
-*/
-        float valueAirPressure = airPressure->GetSensorData();
+
+      float valueAirPressure = airPressure->GetSensorData();
         if (valueAirPressure != NULL)
         {
             dataStore->PostHumidityData(valueAirPressure);
@@ -66,7 +66,8 @@ int main()
 		float valueWindStrength = windStrength->GetSensorData();
         if (valueWindStrength != NULL)
         {
-            dataStore->PostRisingDampData(valueWindStrength);
+		
+			dataStore->PostWindStrengthData(valueWindStrength);
         }
 
         sleep(600);

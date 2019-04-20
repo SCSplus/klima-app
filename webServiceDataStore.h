@@ -16,6 +16,7 @@ public:
     void PostHumidityData(float value);
     void PostLumuinosityData(float value);
     void PostRisingDampData(float value);
+    void PostWindStrengthData(float value);
 
 private:
     void PostData(string data);

@@ -121,6 +121,30 @@ void webServiceDataStore::PostRisingDampData(float value)
     PostData(data);
 }
 
+
+void webServiceDataStore::PostWindStrengthData(float value)
+{
+	string strValue = std::to_string(value);
+
+	string data = "{\"DynamicToken\": \"" + Token + "\"," +
+		"\"Data\": {" +
+		"\"ClimateStationId\": \"" + DeviceId + "\"," +
+		"\"DateOfEntry\" : \"" + DateTimeNow() + "\"," +
+		"\"Type\" : {" +
+		"\"MeasurementTypeId\": \"\"," +
+		"\"Name\" : \"Windgeschwindigkeit\"" +
+		"}, \"Unit\" : {" +
+		"\"MeasurementUnitId\": \"\"," +
+		"\"Name\" : \"kmh\"," +
+		"\"MeasurementType\" : {" +
+		"\"MeasurementTypeId\": \"\"," +
+		"\"Name\" : \"Windgeschwindigkeit\"" +
+		"}}, \"Value\": \"" + strValue + " \",}}";
+
+	PostData(data);
+}
+
+
 void webServiceDataStore::PostData(string data)
 {
     CURL *curl;
