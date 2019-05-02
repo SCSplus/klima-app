@@ -49,15 +49,8 @@
     <ClInclude Include="windStrengthSensor.h">
       <Filter>Sensors</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="config.ini" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="SCSplus.ClimateApp.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\Desktop\windsensorserver.py" />
   </ItemGroup>
 </Project>

@@ -37,22 +37,57 @@ float risingDampSensor::GetSensorData()
         return NULL;
     }
 
-    // ToDo: Welcher Wert muss zurückgegeben werden?
-    if (analogChannel > 0)
-    {
-        // bodenfeuchtigkeit ausgabe 1000 ist trocken ab 300 ist nass
-        /*printf("Bodenfeuchtigkeit (CE%d,%s): analogChannel %d = %d\n", spiChannel, (channelConfig == CHAN_CONFIG_SINGLE)
-            ? "single-ended" : "differential", analogChannel, myAnalogRead(spiChannel, channelConfig, analogChannel - 1));*/
-    }
-    else
-    {
-        int i;
-        for (i = 0; i < 8; i++)
-        {
-            /*printf("MCP3008(CE%d,%s): analogChannel %d = %d\n", spiChannel, (channelConfig == CHAN_CONFIG_SINGLE)
-                ? "single-ended" : "differential", i + 1, myAnalogRead(spiChannel, channelConfig, i));*/
-        }
-    }
+    
+	if (analogChannel > 0)
+	{
+		int sensorwert = myAnalogRead(spiChannel, channelConfig, analogChannel - 1);
+
+		if (sensorwert < 370)
+		{
+			return 100.0f;
+		}
+		if (sensorwert > 370 && sensorwert < 440)
+		{
+			return 90.0f;
+		}
+		if (sensorwert > 440 && sensorwert < 510)
+		{
+			return 80.0f;
+		}
+		if (sensorwert > 510 && sensorwert < 580)
+		{
+			return 70.0f;
+		}
+		if (sensorwert > 580 && sensorwert < 650)
+		{
+			return 60.0f;
+		}
+		if (sensorwert > 650 && sensorwert < 720)
+		{
+			return 50.0f;
+		}
+		if (sensorwert > 720 && sensorwert < 790)
+		{
+			return 40.0f;
+		}
+		if (sensorwert > 790 && sensorwert < 860)
+		{
+			return 30.0f;
+		}
+		if (sensorwert > 860 && sensorwert < 930)
+		{
+			return 20.0f;
+		}
+		if (sensorwert > 930 && sensorwert < 1000)
+		{
+			return 10.0f;
+		}
+		if (sensorwert > 1000)
+		{
+			return 0.0f;
+		}
+	}
+   
     close(myFd);
 
     return 0.0f;

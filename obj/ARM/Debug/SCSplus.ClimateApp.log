@@ -1,0 +1,195 @@
+﻿  Cleaning remote project directory
+  Validating sources
+  Copying sources remotely to 'raspberrypi'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  airPressureSensor.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(19,17): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(19,17): warning :      char *bus = "/dev/i2c-1";
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(19,17): warning :                  ^~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(22,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(22,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(22,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(33,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(33,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(33,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(159,72): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(159,72): warning :      float var1 = (((float)adc_t) / 16384.0 - ((float)dig_T1) / 1024.0) * ((float)dig_T2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(159,72): warning :                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(161,65): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(161,65): warning :      float var2 = ((((float)adc_t) / 131072.0 - ((float)dig_T1) / 8192.0) *
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(161,65): warning :                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(161,65): warning :          (((float)adc_t) / 131072.0 - ((float)dig_T1) / 8192.0)) * ((float)dig_T3);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(161,65): warning :          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(162,20): warning : conversion to ‘float’ from ‘long int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(162,20): warning :      float t_fine = (long)(var1 + var2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(162,20): warning :                     ^~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(165,34): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(165,34): warning :      var1 = ((float)t_fine / 2.0) - 64000.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(165,34): warning :             ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(166,42): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(166,42): warning :      var2 = var1 * var1 * ((float)dig_P6) / 32768.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(166,42): warning :             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(167,17): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(167,17): warning :      var2 = var2 + var1 * ((float)dig_P5) * 2.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(167,17): warning :             ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(168,25): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(168,25): warning :      var2 = (var2 / 4.0) + (((float)dig_P4) * 65536.0);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(168,25): warning :             ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(169,80): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(169,80): warning :      var1 = (((float)dig_P3) * var1 * var1 / 524288.0 + ((float)dig_P2) * var1) / 524288.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(169,80): warning :             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(170,35): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(170,35): warning :      var1 = (1.0 + var1 / 32768.0) * ((float)dig_P1);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(170,35): warning :             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(171,25): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(171,25): warning :      float p = 1048576.0 - (float)adc_p;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(171,25): warning :                ~~~~~~~~~~^~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(172,40): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(172,40): warning :      p = (p - (var2 / 4096.0)) * 6250.0 / var1;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(172,40): warning :          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(173,36): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(173,36): warning :      var1 = ((float)dig_P9) * p * p / 2147483648.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(173,36): warning :             ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(174,32): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(174,32): warning :      var2 = p * ((float)dig_P8) / 32768.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(174,32): warning :             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(175,67): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(175,67): warning :      float pressure = (p + (var1 + var2 + ((float)dig_P7)) / 16.0) / 100;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(175,67): warning :                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(98,9): warning : unused variable ‘dig_H1’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(98,9): warning :      int dig_H1 = data[0];
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(98,9): warning :          ^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(112,9): warning : unused variable ‘dig_H3’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(112,9): warning :      int dig_H3 = b1[2] & 0xFF;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(112,9): warning :          ^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(156,10): warning : unused variable ‘adc_h’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(156,10): warning :      long adc_h = (data[6] * 256 + data[7]);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\airPressureSensor.cpp(156,10): warning :           ^~~~~
+  configReader.cpp
+  humiditySensor.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(19,17): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(19,17): warning :      char *bus = "/dev/i2c-1";
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(19,17): warning :                  ^~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(22,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(22,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(22,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(33,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(33,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(33,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(159,72): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(159,72): warning :      float var1 = (((float)adc_t) / 16384.0 - ((float)dig_T1) / 1024.0) * ((float)dig_T2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(159,72): warning :                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(161,65): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(161,65): warning :      float var2 = ((((float)adc_t) / 131072.0 - ((float)dig_T1) / 8192.0) *
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(161,65): warning :                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(161,65): warning :          (((float)adc_t) / 131072.0 - ((float)dig_T1) / 8192.0)) * ((float)dig_T3);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(161,65): warning :          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(162,20): warning : conversion to ‘float’ from ‘long int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(162,20): warning :      float t_fine = (long)(var1 + var2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(162,20): warning :                     ^~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(165,36): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(165,36): warning :      float var_H = (((float)t_fine) - 76800.0);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(165,36): warning :                    ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(166,66): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(166,66): warning :      var_H = (adc_h - (dig_H4 * 64.0 + dig_H5 / 16384.0 * var_H)) * (dig_H2 / 65536.0 * (1.0 + dig_H6 / 67108864.0 * var_H * (1.0 + dig_H3 / 67108864.0 * var_H)));
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(166,66): warning :              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(167,46): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(167,46): warning :      float humidity = var_H * (1.0 - dig_H1 * var_H / 524288.0);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(167,46): warning :                                               ^~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(167,28): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(167,28): warning :      float humidity = var_H * (1.0 - dig_H1 * var_H / 524288.0);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(167,28): warning :                       ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(51,9): warning : unused variable ‘dig_P1’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(51,9): warning :      int dig_P1 = (b1[6] + b1[7] * 256);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(51,9): warning :          ^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(153,10): warning : unused variable ‘adc_p’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(153,10): warning :      long adc_p = ((long)(data[0] * 65536 + ((long)(data[1] * 256) + (long)(data[2] & 0xF0)))) / 16;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\humiditySensor.cpp(153,10): warning :           ^~~~~
+  luminositySensor.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\luminositySensor.cpp(20,12): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\luminositySensor.cpp(20,12): warning :      return lux;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\luminositySensor.cpp(20,12): warning :             ^~~
+  main.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(35,33): warning : NULL used in arithmetic [-Wpointer-arith]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(35,33): warning :          if (valueAirPressure != NULL)
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(35,33): warning :                                  ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(41,30): warning : NULL used in arithmetic [-Wpointer-arith]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(41,30): warning :          if (valueHumidity != NULL)
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(41,30): warning :                               ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(47,33): warning : NULL used in arithmetic [-Wpointer-arith]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(47,33): warning :          if (valueTemperature != NULL)
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(47,33): warning :                                  ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(53,32): warning : NULL used in arithmetic [-Wpointer-arith]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(53,32): warning :          if (valueLuminosity != NULL)
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(53,32): warning :                                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(59,32): warning : NULL used in arithmetic [-Wpointer-arith]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(59,32): warning :          if (valueRisingDamp != NULL)
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(59,32): warning :                                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(65,34): warning : NULL used in arithmetic [-Wpointer-arith]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(65,34): warning :          if (valueWindStrength != NULL)
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\main.cpp(65,34): warning :                                   ^~~~
+  risingDampSensor.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(30,20): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(30,20): warning :              return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(30,20): warning :                     ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(37,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(37,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(37,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(125,49): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(125,49): warning :      buffer[1] = (channelConfig + analogChannel) << 4;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\risingDampSensor.cpp(125,49): warning :                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+  temperatureSensor.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(19,17): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(19,17): warning :      char *bus = "/dev/i2c-1";
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(19,17): warning :                  ^~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(22,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(22,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(22,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(33,16): warning : converting to non-pointer type ‘float’ from NULL [-Wconversion-null]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(33,16): warning :          return NULL;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(33,16): warning :                 ^~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(159,72): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(159,72): warning :      float var1 = (((float)adc_t) / 16384.0 - ((float)dig_T1) / 1024.0) * ((float)dig_T2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(159,72): warning :                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(161,65): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(161,65): warning :      float var2 = ((((float)adc_t) / 131072.0 - ((float)dig_T1) / 8192.0) *
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(161,65): warning :                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(161,65): warning :          (((float)adc_t) / 131072.0 - ((float)dig_T1) / 8192.0)) * ((float)dig_T3);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(161,65): warning :          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(162,20): warning : conversion to ‘float’ from ‘long int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(162,20): warning :      float t_fine = (long)(var1 + var2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(162,20): warning :                     ^~~~~~~~~~~~~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(163,33): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(163,33): warning :      float cTemp = (var1 + var2) / 5120.0;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(163,33): warning :                    ~~~~~~~~~~~~~~^~~~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(51,9): warning : unused variable ‘dig_P1’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(51,9): warning :      int dig_P1 = (b1[6] + b1[7] * 256);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(51,9): warning :          ^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(98,9): warning : unused variable ‘dig_H1’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(98,9): warning :      int dig_H1 = data[0];
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(98,9): warning :          ^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(112,9): warning : unused variable ‘dig_H3’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(112,9): warning :      int dig_H3 = b1[2] & 0xFF;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(112,9): warning :          ^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(153,10): warning : unused variable ‘adc_p’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(153,10): warning :      long adc_p = ((long)(data[0] * 65536 + ((long)(data[1] * 256) + (long)(data[2] & 0xF0)))) / 16;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(153,10): warning :           ^~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(156,10): warning : unused variable ‘adc_h’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(156,10): warning :      long adc_h = (data[6] * 256 + data[7]);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(156,10): warning :           ^~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(162,11): warning : unused variable ‘t_fine’ [-Wunused-variable]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(162,11): warning :      float t_fine = (long)(var1 + var2);
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\temperatureSensor.cpp(162,11): warning :            ^~~~~~
+  webServiceDataStore.cpp
+  windStrengthSensor.cpp
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\windStrengthSensor.cpp(44,150): warning : conversion to ‘int’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\windStrengthSensor.cpp(44,150): warning :   result = 8e-9 * pow(imp_per_sec, 5) - 2e-6 * pow(imp_per_sec, 4) + 2e-4 * pow(imp_per_sec, 3) - 7.3e-3 * pow(imp_per_sec, 2) + 0.4503 * imp_per_sec + 0.11;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\windStrengthSensor.cpp(44,150): warning :            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\windStrengthSensor.cpp(46,9): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\windStrengthSensor.cpp(46,9): warning :   return result;
+C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\windStrengthSensor.cpp(46,9): warning :          ^~~~~~
+  Linking objects
+  SCSplus.ClimateApp.vcxproj -> C:\Users\dh\source\repos\SCSplus\ClimateApp\SCSplus.ClimateApp\bin\ARM\Debug\SCSplus.ClimateApp.out
+  Invoking 'gpio export 17 out', working directory: '/home/pi/projects/SCSplus.ClimateApp'

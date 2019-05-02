@@ -16,24 +16,22 @@ using namespace std;
 
 int main()
 {
-	configReader *configs = new configReader();
+    configReader *configs = new configReader();
     webServiceDataStore *dataStore = new webServiceDataStore(
-       configs->GetDeviceId(), configs->GetUrl(), configs->GetToken());
+        configs->GetDeviceId(), configs->GetUrl(), configs->GetToken());
 
     airPressureSensor *airPressure = new airPressureSensor();
     humiditySensor *humidity = new humiditySensor();
     temperatureSensor *temperature = new temperatureSensor();
     luminositySensor *luminosity = new luminositySensor();
     risingDampSensor *risingDamp = new risingDampSensor();
-	windStrengthSensor *windStrength = new windStrengthSensor();
+    windStrengthSensor *windStrength = new windStrengthSensor();
 
     while (true)
     {
-        dataStore->PostHumidityData(15);
-        dataStore->PostHumidityData(7);
-        dataStore->PostHumidityData(25);
+        
 
-      float valueAirPressure = airPressure->GetSensorData();
+        float valueAirPressure = airPressure->GetSensorData();
         if (valueAirPressure != NULL)
         {
             dataStore->PostHumidityData(valueAirPressure);
@@ -61,16 +59,16 @@ int main()
         if (valueRisingDamp != NULL)
         {
             dataStore->PostRisingDampData(valueRisingDamp);
-        } 
-		
-		float valueWindStrength = windStrength->GetSensorData();
-        if (valueWindStrength != NULL)
-        {
-		
-			dataStore->PostWindStrengthData(valueWindStrength);
         }
 
-        sleep(600);
+        float valueWindStrength = windStrength->GetSensorData();
+        if (valueWindStrength != NULL)
+        {
+
+            dataStore->PostWindStrengthData(valueWindStrength);
+        }
+
+        sleep(30);
     }
 
 }
